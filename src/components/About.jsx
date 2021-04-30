@@ -1,30 +1,54 @@
-import React from 'react'
-import profile from '../assets/logo.png';
+import React from "react";
+import profile from "../assets/main-2.jpg";
 
 const About = () => {
   return (
-    <section className="px-5 pb-10 md:grid md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:max-w-7xl lg:mx-auto ">
+    <section className="px-5 pb-20 md:grid md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:max-w-7xl lg:mx-auto ">
       <div className="flex items-center justify-center md:items-start">
-        <div className="mr-1">
-        <h4 className="font-bold">KIM DONG IL</h4>
-        <p className="text-gray-500 text-sm">lorem, ipsum dolor.</p>
+        <div className="mr-2">
+          <h4 className="font-bold my-2">KIM DONG IL</h4>
+          <p className="text-gray-500 text-sm">Frontend Developer</p>
         </div>
-        <img src={profile} alt="" className="w-12 rounded-full md:h-10"/>
+        <img
+          src={profile}
+          alt="profile"
+          className="ml-3 w-16 h-16 object-cover rounded-full"
+        />
       </div>
 
       <div>
-        <q className="text-4xl text-center block mt-5 md:mt-0">
-          Whatever a man can imaine, he can invent.
+        <q className="flex align-center justify-center text-4xl text-center mt-5 md:mt-0">
+          Ambition is enthusiasm <br />
+          with a purpose.
         </q>
       </div>
 
       <div className="grid grid-cols-1 gap-5 mt-5 md:mt-0">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo hic modi rerum recusandae dolor deserunt vitae minima praesentium iure sed? Corporis harum illum voluptatem minus sit sint in blanditiis est nostrum quibusdam accusantium rerum magnam quod porro quisquam minima reprehenderit sequi, ipsa optio amet exercitationem sapiente praesentium dicta? Dolores, tempore.</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam repudiandae omnis earum corrupti, aliquam architecto adipisci quod consequatur sequi. Molestiae blanditiis quis officia cum. Nemo autem ipsa ab vero obcaecati.</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum est ab cum sed esse corporis numquam accusamus obcaecati, architecto adipisci.</p>
+        <p>
+          <b>
+            끝은 아무도 모른다. 다만 지나온 시간을 후회하지 않으려면 우선 최선을
+            다해보자
+          </b>
+        </p>
+        <p>
+          시간이 지나고 난 뒤에 자신이 살아온 인생에 대해서 후회하는 것이
+          싫었습니다.
+        </p>
+        <p>
+          후회하지 않기 위해{" "}
+          <b>
+            뮤지컬 배우, 영업, 간호조무, 호텔 프론트데스크, 온라인 쇼핑몰, 병원
+            온라인 마케터
+          </b>{" "}
+          등 다양한 일을 경험했습니다.
+        </p>
+        <p>
+          매 순간 열정적으로 살았던 만큼 professional 한 개발자가 될 수 있도록
+          조금 느릴지언정 성실하게 공부하고 성장하는 개발자가 되고 싶습니다.
+        </p>
       </div>
-    </section>    
-  )
-}
+    </section>
+  );
+};
 
-export default About
+export default About;
