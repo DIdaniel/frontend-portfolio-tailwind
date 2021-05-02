@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import ReactTypingEffect from "react-typing-effect";
 import profile from "../assets/main.jpg";
 import showcase from "../assets/subway.jpg";
 
 const Show = ({ pos, setPos }) => {
-  const onScroll = () => {
+  const onScroll = useCallback(() => {
     setPos(window.pageYOffset);
-  };
+  }, [setPos]);
 
   useEffect(() => {
     window.addEventListener("scroll", onScroll);
