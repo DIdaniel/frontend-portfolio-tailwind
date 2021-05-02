@@ -6,6 +6,8 @@ import grid1 from "../assets/grid-1.gif";
 import grid2 from "../assets/grid-2.gif";
 import grid3 from "../assets/grid-3.gif";
 import grid4 from "../assets/grid-4.gif";
+import grid5 from "../assets/grid-5.gif";
+import grid6 from "../assets/grid-6.gif";
 
 const Grid = () => {
   return (
@@ -52,6 +54,20 @@ const Grid = () => {
         </div>
         <div className="relative">
           <img src={grid4} alt="grid4" />
+          <button className="absolute right-12 bottom-5 bg-white py-2 px-4 flex items-center">
+            Click Me
+            <FaArrowRight className="ml-3" />
+          </button>
+        </div>
+        <div className="relative">
+          <img src={grid5} alt="grid5" />
+          <button className="absolute right-12 bottom-5 bg-white py-2 px-4 flex items-center">
+            Click Me
+            <FaArrowRight className="ml-3" />
+          </button>
+        </div>
+        <div className="relative">
+          <img src={grid6} alt="grid6" />
           <button className="absolute right-12 bottom-5 bg-white py-2 px-4 flex items-center">
             Click Me
             <FaArrowRight className="ml-3" />
