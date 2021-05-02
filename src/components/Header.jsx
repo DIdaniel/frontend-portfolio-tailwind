@@ -4,7 +4,8 @@ import React from "react";
 const Header = () => {
   return (
     <header className="sticky w-full flex items-center justify-between px-20 py-8 text-lg">
-      <div className="logo">
+      <div className="flex">
+        <img src="./assets/logo_transparent.png" alt="logo" width="35px" />
         <h2>DONG-IL</h2>
       </div>
 

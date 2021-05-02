@@ -51,7 +51,7 @@ const Grid = () => {
           <FiPlayCircle className="absolute bottom-5 text-7xl text-white left-5" />
         </div>
         <div className="relative">
-          <img src={grid4} alt="grid1" />
+          <img src={grid4} alt="grid4" />
           <button className="absolute right-12 bottom-5 bg-white py-2 px-4 flex items-center">
             Click Me
             <FaArrowRight className="ml-3" />
@@ -63,5 +63,3 @@ const Grid = () => {
 };
 
 export default Grid;
-
-// className="sm:w-full" => 각각 img tag

@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import ReactTypingEffect from "react-typing-effect";
 import profile from "../assets/main.jpg";
 import showcase from "../assets/subway.jpg";
 
-const Show = () => {
-  const [pos, setPos] = useState(0);
-
+const Show = ({ pos, setPos }) => {
   const onScroll = () => {
     setPos(window.pageYOffset);
   };
@@ -15,7 +13,7 @@ const Show = () => {
     return () => {
       window.removeEventListener("scroll", onScroll);
     };
-  }, []);
+  }, [onScroll]);
 
   return (
     <>
@@ -28,7 +26,7 @@ const Show = () => {
           <img
             src={profile}
             alt="profile-pic"
-            className="ml-3 w-24 h-24 object-cover rounded-full"
+            className="ml-3 w-20 h-20 object-cover rounded-full"
           />
         </div>
 
@@ -73,6 +71,7 @@ const Show = () => {
           </p>
         </div>
       </section>
+
       <div className="relative showcase-image pb-28 ">
         <img
           src={showcase}
@@ -80,11 +79,13 @@ const Show = () => {
           id="showImg"
           className="lg:w-full lg:h-96 "
         />
-        <p
-          className="absolute top-1/3 text-4xl font-semibold text-white bg-gray-500 p-3 opacity-90 rounded-r-3xl "
-          style={{ transform: `translateX(${pos}px)` }}
-        >
-          성장하는 개발자 김동일
+        <p className="absolute bottom-1/4 ">
+          <img
+            className="w-1/2"
+            src="https://media.giphy.com/media/giuuIJG8msg7zzvTTE/giphy.gif"
+            alt="heros"
+            style={{ transform: `translateX(${pos + 100}px)` }}
+          />
         </p>
       </div>
     </>
