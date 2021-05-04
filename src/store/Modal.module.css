@@ -1,0 +1,26 @@
+.container {
+  position: absolute;
+  background-color: #383639;
+  top: 2000px;
+  left: 28%;
+  color: #fff;
+  /* text-align: right; */
+  border-radius: 15px;
+  z-index: 999;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.modalHeader p {
+  font-size: 13px;
+}
+
+.close {
+  padding-top: 5px;
+  font-size: 18px;
+}
