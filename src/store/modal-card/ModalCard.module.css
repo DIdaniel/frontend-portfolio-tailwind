@@ -1,0 +1,28 @@
+.imgWrapper {
+  position: absolute;
+  background-color: #383639;
+
+  top: 1900px;
+  left: 29%;
+  color: #fff;
+  border: 10px solid #383639;
+  border-radius: 10px;
+
+  z-index: 999;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.modalHeader p {
+  font-size: 13px;
+}
+
+.close {
+  padding-top: 5px;
+  font-size: 18px;
+}

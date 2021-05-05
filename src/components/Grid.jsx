@@ -3,6 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 import ReactTypingEffect from "react-typing-effect";
 import { projectList } from "../data/projectList";
 import Modal from "../store/Modal";
+import ModalCard from "../store/modal-card/ModalCard";
 import ProjectItem from "./ProjectItem";
 
 const Grid = () => {
@@ -52,7 +53,7 @@ const Grid = () => {
         {renderProjects}
         {selectedProject && (
           <Modal closeModal={closeModal}>
-            {/* 여기에 모달 안에 들어갈 콤포넌트를 넣으면 돼요 */}
+            <ModalCard />
             <h1>{selectedProject.desc}</h1>
           </Modal>
         )}
