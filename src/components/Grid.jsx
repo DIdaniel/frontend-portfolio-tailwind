@@ -1,15 +1,24 @@
-import React from "react";
-import { FiPlayCircle } from "react-icons/fi";
+import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import ReactTypingEffect from "react-typing-effect";
-import grid1 from "../assets/grid-1.gif";
-import grid2 from "../assets/grid-2.gif";
-import grid3 from "../assets/grid-3.gif";
-import grid4 from "../assets/grid-4.gif";
-import grid5 from "../assets/grid-5.gif";
-import grid6 from "../assets/grid-6.gif";
+import { projectList } from "../data/projectList";
+import Modal from "../store/Modal";
+import ProjectItem from "./ProjectItem";
 
 const Grid = () => {
+  const [projects, setProejcts] = useState(projectList);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const handleOpenModal = (project) => setSelectedProject(project);
+
+  const closeModal = () => {
+    setSelectedProject(null);
+  };
+
+  const renderProjects = projects.map((project) => (
+    <ProjectItem project={project} handleOpenModal={handleOpenModal} />
+  ));
+
   return (
     <>
       <div className="text-4xl text-center mb-5">
@@ -32,47 +41,21 @@ const Grid = () => {
           }}
         />
       </div>
-      <div className="bg-blue-900 h-1 w-20 mx-auto mb-10"></div>
+      <div
+        style={{
+          position: "relative",
+        }}
+        className="bg-blue-900 h-1 w-20 mx-auto mb-10"
+      ></div>
+
       <section className="sm:grid sm:grid-cols-2 sm:gap-3 lg:max-w-7xl lg:mx-auto pb-10">
-        <div className="relative">
-          <img src={grid1} alt="grid1" />
-          <button className="absolute right-12 bottom-3 bg-white py-2 px-4 flex items-center">
-            Click Me
-            <FaArrowRight className="ml-3" />
-          </button>
-        </div>
-        <div className="relative mt-5 sm:mt-0">
-          <img src={grid2} alt="grid2" />
-          <FiPlayCircle className="absolute bottom-5 text-7xl text-white left-5" />
-        </div>
-        <div className="relative mt-5 sm:mt-0">
-          <img src={grid3} alt="grid3" />
-          <h4 className="absolute top-10 right-12 bg-black text-white py-2 px-3">
-            Moving 3D Card
-          </h4>
-          <FiPlayCircle className="absolute bottom-5 text-7xl text-white left-5" />
-        </div>
-        <div className="relative">
-          <img src={grid4} alt="grid4" />
-          <button className="absolute right-12 bottom-5 bg-white py-2 px-4 flex items-center">
-            Click Me
-            <FaArrowRight className="ml-3" />
-          </button>
-        </div>
-        <div className="relative">
-          <img src={grid5} alt="grid5" />
-          <button className="absolute right-12 bottom-5 bg-white py-2 px-4 flex items-center">
-            Click Me
-            <FaArrowRight className="ml-3" />
-          </button>
-        </div>
-        <div className="relative">
-          <img src={grid6} alt="grid6" />
-          <button className="absolute right-12 bottom-5 bg-white py-2 px-4 flex items-center">
-            Click Me
-            <FaArrowRight className="ml-3" />
-          </button>
-        </div>
+        {renderProjects}
+        {selectedProject && (
+          <Modal closeModal={closeModal}>
+            {/* 여기에 모달 안에 들어갈 콤포넌트를 넣으면 돼요 */}
+            <h1>{selectedProject.desc}</h1>
+          </Modal>
+        )}
       </section>
     </>
   );
