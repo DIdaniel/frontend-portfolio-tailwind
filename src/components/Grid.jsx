@@ -1,17 +1,14 @@
 import React, { useState } from "react";
-import { FiPlayCircle } from "react-icons/fi";
 import { FaArrowRight } from "react-icons/fa";
 import ReactTypingEffect from "react-typing-effect";
 import { grids } from "../data/grids";
 import Modal from "../store/Modal";
 
 const Grid = () => {
-  const [portfolio, setPortpolio] = useState(grids);
+  const [portfolio] = useState(grids);
   const [isOpen, setIsOpen] = useState(false);
 
   const closeModal = () => setIsOpen(false);
-
-  console.log(portfolio);
 
   return (
     <>
@@ -65,7 +62,7 @@ const Grid = () => {
 
         <div className="relative mt-5 sm:mt-0">
           <img src={portfolio[1].image} alt="grid2" />
-          <button className="absolute right-12 bottom-5 bg-white py-2 px-4 flex items-center">
+          <button className="absolute right-12 bottom-3 bg-white py-2 px-4 flex items-center">
             Click Me
             <FaArrowRight className="ml-3" />
           </button>
@@ -73,33 +70,37 @@ const Grid = () => {
 
         <div className="relative mt-5 sm:mt-0">
           <img src={portfolio[2].image} alt="grid3" />
-          <button className="absolute right-12 bottom-5 bg-white py-2 px-4 flex items-center">
+          <button className="absolute right-12 bottom-3 bg-white py-2 px-4 flex items-center">
             Click Me
             <FaArrowRight className="ml-3" />
           </button>
         </div>
+
         <div className="relative">
           <img src={portfolio[3].image} alt="grid4" />
-          <button className="absolute right-12 bottom-5 bg-white py-2 px-4 flex items-center">
+          <button className="absolute right-12 bottom-3 bg-white py-2 px-4 flex items-center">
             Click Me
             <FaArrowRight className="ml-3" />
           </button>
         </div>
+
         <div className="relative">
           <img src={portfolio[4].image} alt="grid5" />
-          <button className="absolute right-12 bottom-5 bg-white py-2 px-4 flex items-center">
+          <button className="absolute right-12 bottom-3 bg-white py-2 px-4 flex items-center">
             Click Me
             <FaArrowRight className="ml-3" />
           </button>
         </div>
+
         <div className="relative">
           <img src={portfolio[5].image} alt="grid6" />
-          <button className="absolute right-12 bottom-5 bg-white py-2 px-4 flex items-center">
+          <button className="absolute right-12 bottom-3 bg-white py-2 px-4 flex items-center">
             Click Me
             <FaArrowRight className="ml-3" />
           </button>
         </div>
-        <Modal isOpen={isOpen} closeModal={closeModal} />
+
+        <Modal isOpen={isOpen} closeModal={closeModal} portfolio={portfolio} />
       </section>
     </>
   );

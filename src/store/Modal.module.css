@@ -1,11 +1,11 @@
 .container {
   position: absolute;
   background-color: #383639;
-  top: 2000px;
-  left: 28%;
+  top: 1900px;
+  left: 29%;
   color: #fff;
-  /* text-align: right; */
-  border-radius: 15px;
+  border: 10px solid #383639;
+  border-radius: 10px;
   z-index: 999;
 }
 
