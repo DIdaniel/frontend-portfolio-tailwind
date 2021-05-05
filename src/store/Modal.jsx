@@ -13,7 +13,7 @@ const Backdrop = ({ closeModal }) => (
       width: "100%",
       height: "100vh",
       zIndex: "40",
-      backgroundColor: "rgba(0, 0, 0, 0.25)",
+      backgroundColor: "rgba(0, 0, 0, 0.6)",
     }}
   ></div>
 );
@@ -22,11 +22,11 @@ const ModalOverlay = (props) => (
   <div
     style={{
       position: "fixed",
-      top: "20vh",
-      left: "5%",
-      width: "90%",
-      backgroundColor: "white",
-      padding: "1rem",
+      top: "15vh",
+      left: "25%",
+      width: "50%",
+      backgroundColor: "rgb(232, 233, 237)",
+      padding: "0.5rem",
       borderRadius: "14px",
       zIndex: "50",
     }}

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FaArrowRight } from "react-icons/fa";
 import ReactTypingEffect from "react-typing-effect";
 import { projectList } from "../data/projectList";
 import Modal from "../store/Modal";
@@ -53,8 +52,10 @@ const Grid = () => {
         {renderProjects}
         {selectedProject && (
           <Modal closeModal={closeModal}>
-            <ModalCard />
-            <h1>{selectedProject.desc}</h1>
+            <ModalCard
+              selectedProject={selectedProject}
+              closeModal={closeModal}
+            />
           </Modal>
         )}
       </section>

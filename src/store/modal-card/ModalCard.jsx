@@ -1,8 +1,23 @@
 import React from "react";
-import { styles } from "./ModalCard.module.css";
+import {
+  ModalCardWrapper,
+  HeaderBtns,
+  CloseBtn,
+  ModalImg,
+  ModalDesc,
+} from "./modalCardStyle.js";
 
-const ModalCard = () => {
-  return <div>Hello</div>;
+const ModalCard = ({ selectedProject, closeModal }) => {
+  return (
+    <ModalCardWrapper>
+      <HeaderBtns>
+        <p>🔴 🟡 🟢</p>
+        <ModalDesc>- {selectedProject.desc} -</ModalDesc>
+        <CloseBtn onClick={closeModal}>X</CloseBtn>
+      </HeaderBtns>
+      <ModalImg src={selectedProject.image} alt={selectedProject.desc} />
+    </ModalCardWrapper>
+  );
 };
 
 export default ModalCard;
@@ -17,14 +32,4 @@ style={{
 }}
 </div>
 > */
-}
-
-{
-  /* <div className={styles.imgWrapper}>
-<div className={styles.modalHeader}>
-  <p>🔴🟡🟢</p>
-  <button className={styles.close}>X</button>
-</div>
-<img src="../assets/logo.png" alt="test" width="150%" />
-</div> */
 }
