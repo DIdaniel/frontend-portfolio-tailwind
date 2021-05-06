@@ -30,27 +30,37 @@ const AboutSecond = () => {
           대한 공부를 하고 있으며, Interactive 웹/앱 구현에 관심이 있습니다.
         </p>
         <ul className="flex items-center justify-center pb-20 lg:justify-start -ml-5">
-          <li className="mx-5 text-4xl">
+          <li className="mx-5 cursor-pointer">
             <a
               href="https://www.notion.so/12c37c1f0f4d4a0888820e3eaa8b735c"
               target="_blank"
               rel="noreferrer"
             >
-              <SiNotion className="hover:opacity-60" />
+              <SiNotion className="text-4xl hover:opacity-60" />
+              <p className="text-1xl hover:opacity-60 animate-bounce w-12 h-6 mt-3 ">
+                이력서
+              </p>
             </a>
           </li>
-          <li className="mx-5 text-4xl">
+
+          <li className="mx-5 cursor-pointer">
             <a href="https://velog.io/@faunus" target="_blank" rel="noreferrer">
-              <FaBlogger className="hover:opacity-60" />
+              <FaBlogger className="text-4xl hover:opacity-60" />
+              <p className="text-1xl hover:opacity-60 animate-bounce w-12 h-6 mt-3 ">
+                블로그
+              </p>
             </a>
           </li>
-          <li className="mx-5 text-4xl">
+          <li className="mx-5 cursor-pointer">
             <a
               href="https://github.com/DIdaniel"
               target="_blank"
               rel="noreferrer"
             >
-              <AiOutlineGithub className="hover:opacity-60" />
+              <AiOutlineGithub className=" text-4xl hover:opacity-60" />
+              <p className="text-1xl hover:opacity-60 animate-bounce w-12 h-6 mt-3 cursor-pointer">
+                깃허브
+              </p>
             </a>
           </li>
         </ul>
