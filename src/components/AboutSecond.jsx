@@ -44,7 +44,11 @@ const AboutSecond = () => {
           </li>
 
           <li className="mx-5 cursor-pointer">
-            <a href="https://velog.io/@faunus" target="_blank" rel="noreferrer">
+            <a
+              href="https://patrick-f.tistory.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaBlogger className="text-4xl hover:opacity-60" />
               <p className="text-1xl hover:opacity-60 animate-bounce w-12 h-6 mt-3 ">
                 블로그
