@@ -21,15 +21,3 @@ const ModalCard = ({ selectedProject, closeModal }) => {
 };
 
 export default ModalCard;
-
-{
-  /* <div
-className={styles.container}
-style={{
-  transform: isOpen ? "translateY(0vh)" : "translateY(-200vh)",
-  opacity: isOpen ? "1" : "0",
-  transition: "all 1.3s ease",
-}}
-</div>
-> */
-}
